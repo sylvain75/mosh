@@ -56,7 +56,7 @@ const Accordion: FunctionComponent<AccordionProps> = ({ title, children, action,
     <div className={styles.container}>
       {imageSrc ? (
         <div className={styles['hero-card-image-wrapper']} onClick={toggleAccordionState}>
-          <Image src={imageSrc} alt={imageAlt || ''} fill style={{ borderRadius: 20, objectFit: 'cover' }} />
+          <Image src={imageSrc} alt={imageAlt || ''} fill style={{ borderRadius: 20, objectFit: 'cover' }} priority />
         </div>
       ) : null}
       <div className={styles.content}>
