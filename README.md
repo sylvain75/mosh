@@ -1,4 +1,29 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Objective
+
+Build a simple React application (preferably using TypeScript) with a home page including the
+hero section as below and following the best practices in regards to the code structure, CSS,
+API integration and setting the application up for scale.
+
+## Requirements
+
+- Create a page with the hero section based on the designs in Figma (it will be a simple
+  page with only this one section)
+- You have a complete discretion over what components you decide to build and how you
+  structure your code, although we will look at it from the best practices perspective
+  (please refrain from using existing components libraries)
+  PRIVATE AND CONFIDENTIAL
+- We want to see how you will implement the custom styling and how proficient you are in
+  CSS (please use Figma as a guide in terms of the colors, spacing, resources etc)
+- The section should be responsive - in Figma you will also find the designs for different
+  screen sizes
+- Please have a look at Figma file and the card behavior description (in regards to the
+  accordion and a clickable area)
+- The list items data for a free consultation and a therapy sessions (accordions) should
+  come from the mocked API: https://moshhero.free.beeceptor.com/my/api/options
+  The rest of the copy is static.
+- The buttons can link to:
+  - Get started - https://www.getmosh.com.au/quizzes/mental_health_quiz
+  - Book therapist - https://www.getmosh.com.au/booking/mental_health
 
 ## Getting Started
 
@@ -6,33 +31,39 @@ First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Notes
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### Cool bits
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- CI/CD hooks
+- Next js
+- Mocked api down backed up by hard coded mocks
+- Css modules (not convinced by this approach)
+- Use Query to fetch data, It is a standard now
+- Type guard to sort `renderAction` TS issue
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Could be better with more time
 
-## Learn More
+- theme spacing
+- Accordion items `display: none` => renders twice in the DOM
+- Maybe there is a better way to handle the accordion toggling
+- Image specific per device size to avoid "zooming effect" on mobile
 
-To learn more about Next.js, take a look at the following resources:
+### Not covered
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Accessibility
+- Cross browser check
+- Paid font family for h1 (Clearface ITC Pro) replaced with a similar one
+- Server component fetching / SSR / SSG
+- Suspense loading
+- Api fetching error/loading UI
+- BEM css naming convention
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Assumptions
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Figma does not indicate the minWidth for breakpoint (1440px for Desktop is far too large) so I arbitrary chose them
+- Hug Sub text not breaking the same on mobile device, I assumed it is a design bug

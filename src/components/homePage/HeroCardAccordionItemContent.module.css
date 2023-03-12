@@ -1,0 +1,13 @@
+.list-item {
+  list-style-type: none;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 16px;
+  justify-content: left;
+  width: 100%;
+  align-items: center;
+  line-height: 24px;
+}
+.list-item:not(:first-child) {
+    margin-top: 8px;
+  }

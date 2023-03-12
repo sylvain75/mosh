@@ -1,0 +1,27 @@
+.container {
+  display: grid;
+  grid-auto-flow: row;
+  width: 100%;
+}
+.hero-card-image-wrapper {
+  width: 285px;
+  height: 200px;
+  position: relative;
+  display: grid;
+}
+
+@media only screen and (min-width: 575px) {
+  .container {
+    display: grid;
+    grid-auto-flow: row;
+    grid-gap: 16px;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .container {
+    grid-auto-flow: column;
+    grid-template-columns: 285px 1fr;
+  }
+}
+
