@@ -37,6 +37,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Notes
 
+Deployed to https://mosh-git-main-sylvain75.vercel.app/
+
 ### Cool bits
 
 - CI/CD hooks
